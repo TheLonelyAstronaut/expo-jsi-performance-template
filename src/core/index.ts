@@ -8,6 +8,6 @@ import { AppModule } from "./model/app-module.model";
 import { coreContainerModule } from "./utils/di/container.di";
 
 export const coreModule: AppModule = {
-    navigation: {},
+    navigation: [],
     di: coreContainerModule
 };

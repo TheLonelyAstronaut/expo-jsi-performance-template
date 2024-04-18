@@ -1,10 +1,11 @@
-import { AppModule, PresentationType } from "../../core";
+import { AppModule, NavigationService, PresentationType, withScreenNavigationBuilder } from "../../core";
 import { HomeScreen } from "./presentation/home.screen";
 
 export const homeModule: AppModule = {
-    navigation: {
-        [HomeScreen.key]: {
-            root: HomeScreen,
+    navigation: [
+        {
+            key: NavigationService.HOME_KEY,
+            root: withScreenNavigationBuilder(HomeScreen),
             presentation: PresentationType.Root,
             options: {
                 topBar: {
@@ -14,5 +15,5 @@ export const homeModule: AppModule = {
                 }
             }
         }
-    }
+    ]
 };

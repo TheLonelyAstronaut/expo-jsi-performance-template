@@ -1,10 +1,11 @@
-import { AppModule, PresentationType } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
 import { EnterExitScreen } from "./presentation/enter-exit.screen";
 
 export const enterExitModule: AppModule = {
-    navigation: {
-        [EnterExitScreen.key]: {
-            root: EnterExitScreen,
+    navigation: [
+        {
+            key: 'EnterExit',
+            root: withScreenNavigationBuilder(EnterExitScreen),
             presentation: PresentationType.Screen,
             options: {
                 topBar: {
@@ -17,5 +18,5 @@ export const enterExitModule: AppModule = {
                 }
             }
         }
-    }
+    ]
 };

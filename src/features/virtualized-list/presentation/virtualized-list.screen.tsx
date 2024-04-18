@@ -1,13 +1,12 @@
 import { View, StyleSheet, Text } from "react-native";
-import { withScreenNavigationBuilder } from "../../../core";
 
-export const VirtualizedListScreen = withScreenNavigationBuilder('VirtualizedList', () => {
+export const VirtualizedListScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>VirtualizedList</Text>
+            <Text>VirtualizedList 123</Text>
         </View>
     );
-});
+};
 
 const styles = StyleSheet.create({
     container: {

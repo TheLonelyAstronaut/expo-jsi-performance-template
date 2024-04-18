@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { View , Text, StyleSheet} from "react-native";
 import { CommonSplash } from "./components/common-splash.component";
-import { useAppNavigation, withScreenNavigationBuilder, NavigationService } from "../../../core";
+import { useAppNavigation } from "../../../core";
 
-export const SplashScreen = withScreenNavigationBuilder(NavigationService.SPLASH_KEY, () => {
+export const SplashScreen = () => {
     const navigation = useAppNavigation();
     
     useEffect(() => {
@@ -13,4 +13,4 @@ export const SplashScreen = withScreenNavigationBuilder(NavigationService.SPLASH
     }, []);
 
     return <CommonSplash/>
-});
+};

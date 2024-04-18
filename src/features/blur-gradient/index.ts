@@ -1,10 +1,11 @@
-import { AppModule, PresentationType } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
 import { BlurGradientScreen } from "./presentation/blur-gradient.screen";
 
 export const blurGradientModule: AppModule = {
-    navigation: {
-        [BlurGradientScreen.key]: {
-            root: BlurGradientScreen,
+    navigation: [
+        {
+            key: 'BlurGradient',
+            root: withScreenNavigationBuilder(BlurGradientScreen),
             presentation: PresentationType.Screen,
             options: {
                 topBar: {
@@ -17,5 +18,5 @@ export const blurGradientModule: AppModule = {
                 }
             }
         }
-    }
+    ]
 };

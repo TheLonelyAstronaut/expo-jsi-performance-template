@@ -1,10 +1,11 @@
-import { AppModule, PresentationType } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
 import { VirtualizedListScreen } from "./presentation/virtualized-list.screen";
 
 export const virtualizedListModule: AppModule = {
-    navigation: {
-        [VirtualizedListScreen.key]: {
-            root: VirtualizedListScreen,
+    navigation: [
+        {
+            key: 'VirtualizedList',
+            root: withScreenNavigationBuilder(VirtualizedListScreen),
             presentation: PresentationType.Screen,
             options: {
                 topBar: {
@@ -17,5 +18,5 @@ export const virtualizedListModule: AppModule = {
                 }
             }
         }
-    }
+    ]
 };

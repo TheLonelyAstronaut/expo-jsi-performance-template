@@ -1,10 +1,6 @@
 import { ContainerModule } from "inversify";
-import React from "react";
 import { Options, OptionsModalPresentationStyle } from "react-native-navigation";
 
-export type ComponentBuilderWithNavigationInfo = (() => React.ComponentType) & {
-    key: string;
-}
 
 export enum PresentationType {
     Stack = 'stack',
@@ -16,13 +12,13 @@ export enum PresentationType {
 export {OptionsModalPresentationStyle as ModalPresentationStyle};
 
 export type AppNavigationModule = {
-    root: ComponentBuilderWithNavigationInfo;
+    key: string;
+    root: React.ComponentType;
     presentation: PresentationType;
     options: Options;
 }
 
 export type AppModule = {
-    keys?: Record<string, string>;
-    navigation: Record<string, AppNavigationModule>;
+    navigation: Array<AppNavigationModule>;
     di?: ContainerModule
 }

@@ -41,16 +41,16 @@ export class NavigationService {
 
     initAppWithModules = (modules: Array<AppModule>) => {
         modules.filter(m => !!m.navigation).forEach((module) => {
-            Object.keys(module.navigation).forEach((key) => {
-                this.modules[key] = module.navigation[key];
+            module.navigation.forEach((n, key) => {
+                this.modules[n.key] = n;
 
-                if (key === NavigationService.SPLASH_KEY) {
+                if (n.key === NavigationService.SPLASH_KEY) {
                     this.splash = module.navigation[key];
-                } else if (key === NavigationService.HOME_KEY) {
+                } else if (n.key === NavigationService.HOME_KEY) {
                     this.home = module.navigation[key];
                 }
-      
-                Navigation.registerComponent(module.navigation[key].root.key, module.navigation[key].root);
+
+                Navigation.registerComponent(n.key, () => n.root);
             });
         });
     }
@@ -58,7 +58,7 @@ export class NavigationService {
     private _navigate = (componentId: string, module: Partial<AppNavigationModule>, direction?: Direction, params?: object) => {
         const component = !!module.root ? {
             component: {
-                name: module.root.key,
+                name: module.key,
                 passProps: params,
                 options: {
                     ...module.options,
