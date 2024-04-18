@@ -1,8 +1,9 @@
 import { View, StyleSheet, Text, ScrollView, Button } from "react-native";
-import { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import R, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { useEffect } from "react";
 import { useAppNavigation } from "../../../core";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { CommonSplash } from "../../splash";
 
 export const HomeScreen = () => {
     const opacity = useSharedValue(1);
@@ -25,6 +26,7 @@ export const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
+            <Text style={{ marginTop: safe.top + 16, fontWeight: '600', marginBottom: 16, fontSize: 20 }}>Expo JSI Performace Template App 🚀</Text>
             <Text style={{ marginTop: 16, textAlign: 'center' }}>To compare performance with Bridge/Fabric, just change "newArchEnabled" prop in app.json!</Text>
             <ScrollView>
                 <View style={{ marginTop: 16 }}>
@@ -41,9 +43,9 @@ export const HomeScreen = () => {
                 </View>
             </ScrollView>
             {/* Uncomment to get fade-out */}
-            {/* <R.View style={splashStyle}>
+            <R.View style={splashStyle}>
                 <CommonSplash />
-            </R.View> */}
+            </R.View>
         </View>
     );
 };

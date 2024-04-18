@@ -9,9 +9,7 @@ export const homeModule: AppModule = {
             presentation: PresentationType.Root,
             options: {
                 topBar: {
-                    title: {
-                        text: 'Expo JSI Performace Template App 🚀'
-                    }
+                    visible: false
                 }
             }
         }
