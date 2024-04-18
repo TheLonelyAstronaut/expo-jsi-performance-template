@@ -1,4 +1,4 @@
-import { AppModule, NavigationService, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, NavigationService, PresentationType, withScreenNavigationBuilder } from "@core";
 import { HomeScreen } from "./presentation/home.screen";
 
 export const homeModule: AppModule = {

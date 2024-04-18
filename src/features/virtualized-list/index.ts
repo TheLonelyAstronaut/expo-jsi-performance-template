@@ -1,4 +1,4 @@
-import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "@core";
 import { VirtualizedListScreen } from "./presentation/virtualized-list.screen";
 
 export const virtualizedListModule: AppModule = {

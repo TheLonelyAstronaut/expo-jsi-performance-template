@@ -1,4 +1,4 @@
-import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "@core";
 import { BlurGradientScreen } from "./presentation/blur-gradient.screen";
 
 export const blurGradientModule: AppModule = {

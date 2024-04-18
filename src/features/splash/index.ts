@@ -1,6 +1,6 @@
 export { CommonSplash } from './presentation/components/common-splash.component';
 
-import { AppModule, ModalPresentationStyle, NavigationService, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, ModalPresentationStyle, NavigationService, PresentationType, withScreenNavigationBuilder } from "@core";
 import { SplashScreen } from "./presentation/splash.screen";
 
 export const splashModule: AppModule = {

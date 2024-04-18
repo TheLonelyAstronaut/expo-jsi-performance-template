@@ -6,7 +6,12 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@core": ["./src/core"],
+      "@app": ["./src/app"],
+      "@features/*": ["./src/features/*"]
+    }
   },
   "extends": "expo/tsconfig.base"
 }

@@ -1,4 +1,4 @@
-import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "@core";
 import { EnterExitScreen } from "./presentation/enter-exit.screen";
 
 export const enterExitModule: AppModule = {

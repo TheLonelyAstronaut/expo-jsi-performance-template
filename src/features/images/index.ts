@@ -1,4 +1,4 @@
-import { AppModule, PresentationType, withScreenNavigationBuilder } from "../../core";
+import { AppModule, PresentationType, withScreenNavigationBuilder } from "@core";
 import { ImagesScreen } from "./presentation/images.screen";
 
 export const imagesModule: AppModule = {

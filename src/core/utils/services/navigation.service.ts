@@ -119,9 +119,7 @@ export class NavigationService {
     }
 
     hideSplash = () => {
-        Navigation.events().registerAppLaunchedListener(() => {
-            this._navigate('', this.home);
-        });
+        this._navigate('', this.home);
     }
 
     navigate = (componentId: string, module: string, params?: object) => {

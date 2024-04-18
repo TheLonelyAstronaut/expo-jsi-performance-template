@@ -1,7 +1,6 @@
 import { ContainerModule } from "inversify";
 import { Options, OptionsModalPresentationStyle } from "react-native-navigation";
 
-
 export enum PresentationType {
     Stack = 'stack',
     Screen = 'screen',

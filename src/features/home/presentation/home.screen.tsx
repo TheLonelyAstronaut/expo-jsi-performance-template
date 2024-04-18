@@ -1,9 +1,9 @@
 import { View, StyleSheet, Text, ScrollView, Button } from "react-native";
 import R, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { useEffect } from "react";
-import { useAppNavigation } from "../../../core";
+import { useAppNavigation } from "@core";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { CommonSplash } from "../../splash";
+import { CommonSplash } from "@features/splash";
 
 export const HomeScreen = () => {
     const opacity = useSharedValue(1);
@@ -26,8 +26,8 @@ export const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={{ marginTop: safe.top + 16, fontWeight: '600', marginBottom: 16, fontSize: 20 }}>Expo JSI Performace Template App 🚀</Text>
-            <Text style={{ marginTop: 16, textAlign: 'center' }}>To compare performance with Bridge/Fabric, just change "newArchEnabled" prop in app.json!</Text>
+            <Text style={{ marginTop: safe.top + 16, fontWeight: '600', fontSize: 20 }}>Expo JSI Performace Template App 🚀</Text>
+            <Text style={{ marginTop: 16, textAlign: 'center', fontWeight: '600' }}>Placebook playground</Text>
             <ScrollView>
                 <View style={{ marginTop: 16 }}>
                     <Button onPress={() => navigation.navigate('BlurGradient')} title={'Blur + Gradient'} />
