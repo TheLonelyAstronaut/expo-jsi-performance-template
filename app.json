@@ -15,16 +15,42 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.expojsiperformance"
+    },
+    "androidStatusBar": {
+      "translucent": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.expojsiperformance"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      [
+        "rnn-expo-plugin",
+        { "setupAndroidSplash": true }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true,
+          },
+          "android": {
+            "kotlinVersion": "1.8.0",
+            "newArchEnabled": true,
+            "packagingOptions": {
+              "pickFirst": [
+                "**/libc++_shared.so",
+                "**/libreact_utils.so"
+              ]
+            }
+          }
+        }
+      ]
+    ]
   }
 }
